@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabViewView: View {
     @State var isShowNewBPSheet = false
+    
     var body: some View {
         ZStack {
             TabView {
@@ -24,6 +25,8 @@ struct TabViewView: View {
             .onAppear {
                 UITabBar.appearance().backgroundColor = UIColor(named: "TabBarBackgroundColor")!
             }
+            
+            // MARK: Plus icon to add new BP
             VStack {
                 Spacer()
                 ZStack {
@@ -35,6 +38,7 @@ struct TabViewView: View {
                         .font(.system(size: 45))
                         .onTapGesture {
                             isShowNewBPSheet.toggle()
+                            haptic(.success)
                         }
                         .sheet(isPresented: $isShowNewBPSheet) {
                             AddNewBPView()
