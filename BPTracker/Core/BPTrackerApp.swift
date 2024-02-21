@@ -11,7 +11,7 @@ import SwiftUI
 struct BPTrackerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabViewView()
         }
     }
 }

@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		0C7A85912B8513B5004D76E9 /* BPTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A85902B8513B5004D76E9 /* BPTrackerApp.swift */; };
-		0C7A85932B8513B5004D76E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A85922B8513B5004D76E9 /* ContentView.swift */; };
+		0C7A85932B8513B5004D76E9 /* TabViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A85922B8513B5004D76E9 /* TabViewView.swift */; };
 		0C7A85952B8513B5004D76E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A85942B8513B5004D76E9 /* Assets.xcassets */; };
 		0C7A85982B8513B5004D76E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A85972B8513B5004D76E9 /* Preview Assets.xcassets */; };
+		0CDECC772B85CAEC005E7437 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDECC762B85CAEC005E7437 /* HomeView.swift */; };
+		0CDECC792B85D64A005E7437 /* AddNewBPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDECC782B85D64A005E7437 /* AddNewBPView.swift */; };
+		0CDECC7B2B85D689005E7437 /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDECC7A2B85D689005E7437 /* AnalyticsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C7A858D2B8513B5004D76E9 /* BPTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BPTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7A85902B8513B5004D76E9 /* BPTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPTrackerApp.swift; sourceTree = "<group>"; };
-		0C7A85922B8513B5004D76E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0C7A85922B8513B5004D76E9 /* TabViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewView.swift; sourceTree = "<group>"; };
 		0C7A85942B8513B5004D76E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C7A85972B8513B5004D76E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0CDECC762B85CAEC005E7437 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0CDECC782B85D64A005E7437 /* AddNewBPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBPView.swift; sourceTree = "<group>"; };
+		0CDECC7A2B85D689005E7437 /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,11 @@
 		0C7A858F2B8513B5004D76E9 /* BPTracker */ = {
 			isa = PBXGroup;
 			children = (
-				0C7A85902B8513B5004D76E9 /* BPTrackerApp.swift */,
-				0C7A85922B8513B5004D76E9 /* ContentView.swift */,
+				0CDECC752B85CAA2005E7437 /* Core */,
+				0CDECC742B85CA78005E7437 /* Extension */,
+				0CDECC732B85CA6B005E7437 /* View */,
+				0CDECC722B85CA5F005E7437 /* ViewModel */,
+				0CDECC712B85CA3C005E7437 /* Model */,
 				0C7A85942B8513B5004D76E9 /* Assets.xcassets */,
 				0C7A85962B8513B5004D76E9 /* Preview Content */,
 			);
@@ -65,6 +74,46 @@
 				0C7A85972B8513B5004D76E9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0CDECC712B85CA3C005E7437 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0CDECC722B85CA5F005E7437 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0CDECC732B85CA6B005E7437 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C7A85922B8513B5004D76E9 /* TabViewView.swift */,
+				0CDECC762B85CAEC005E7437 /* HomeView.swift */,
+				0CDECC782B85D64A005E7437 /* AddNewBPView.swift */,
+				0CDECC7A2B85D689005E7437 /* AnalyticsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0CDECC742B85CA78005E7437 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0CDECC752B85CAA2005E7437 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0C7A85902B8513B5004D76E9 /* BPTrackerApp.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C7A85932B8513B5004D76E9 /* ContentView.swift in Sources */,
+				0CDECC772B85CAEC005E7437 /* HomeView.swift in Sources */,
+				0CDECC792B85D64A005E7437 /* AddNewBPView.swift in Sources */,
+				0C7A85932B8513B5004D76E9 /* TabViewView.swift in Sources */,
+				0CDECC7B2B85D689005E7437 /* AnalyticsView.swift in Sources */,
 				0C7A85912B8513B5004D76E9 /* BPTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
