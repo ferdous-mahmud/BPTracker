@@ -18,12 +18,29 @@ final class BPViewModel: ObservableObject {
             BPModel(sysBP: 110, diaBP: 70, pulse: 90, isTakaPill: true, date: Date.now),
             BPModel(sysBP: 130, diaBP: 90, pulse: 40, isTakaPill: false, date: Date.now),
             BPModel(sysBP: 150, diaBP: 120, pulse: 70, isTakaPill: true, date: Date.now),
+            BPModel(sysBP: 170, diaBP: 50, pulse: 90, isTakaPill: true, date: Date.now),
+            BPModel(sysBP: 120, diaBP: 80, pulse: 100, isTakaPill: false, date: Date.now),
+            BPModel(sysBP: 110, diaBP: 70, pulse: 90, isTakaPill: true, date: Date.now),
+            BPModel(sysBP: 130, diaBP: 90, pulse: 40, isTakaPill: false, date: Date.now),
+            BPModel(sysBP: 150, diaBP: 120, pulse: 70, isTakaPill: true, date: Date.now),
+            BPModel(sysBP: 170, diaBP: 50, pulse: 90, isTakaPill: true, date: Date.now),
+            BPModel(sysBP: 120, diaBP: 80, pulse: 100, isTakaPill: false, date: Date.now),
+            BPModel(sysBP: 110, diaBP: 70, pulse: 90, isTakaPill: true, date: Date.now),
+            BPModel(sysBP: 130, diaBP: 90, pulse: 40, isTakaPill: false, date: Date.now),
+            BPModel(sysBP: 150, diaBP: 120, pulse: 70, isTakaPill: true, date: Date.now),
+            BPModel(sysBP: 170, diaBP: 50, pulse: 90, isTakaPill: true, date: Date.now),
+            BPModel(sysBP: 120, diaBP: 80, pulse: 100, isTakaPill: false, date: Date.now),
+            BPModel(sysBP: 110, diaBP: 70, pulse: 90, isTakaPill: true, date: Date.now),
+            BPModel(sysBP: 130, diaBP: 90, pulse: 40, isTakaPill: false, date: Date.now),
+            BPModel(sysBP: 150, diaBP: 120, pulse: 70, isTakaPill: true, date: Date.now),
             BPModel(sysBP: 170, diaBP: 50, pulse: 90, isTakaPill: true, date: Date.now)
         ]
     }
     
     /// Add new BP entry
     func addNewBP(newBP: BPModel) -> Bool {
+        
+        bpList.append(newBP)
         
         return true
     }

@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     @State var isShowArticle = false
     
+    @ObservedObject var vm: BPViewModel = BPViewModel()
+    
     var body: some View {
         VStack {
             BPArticleTile()
@@ -29,7 +31,13 @@ struct HomeView: View {
             }
             .padding(.leading)
             
-            Spacer()
+            List(vm.bpList, id: \.id) { bp in
+                Text("\(bp.diaBP)")
+            }
+            .onAppear {
+                vm.getMockBPs()
+            }
+          
         }
     }
 }

@@ -27,6 +27,15 @@ struct AddNewBPView: View {
                     .bold()
                     .font(.title2)
                 Spacer()
+                
+                Image(systemName: "xmark")
+                    .bold()
+                    .foregroundColor(.gray)
+                    .frame(width: 30, height: 30)
+                    .onTapGesture {
+                        haptic(.success)
+                        dismiss()
+                    }
             }
             .padding(.vertical)
             

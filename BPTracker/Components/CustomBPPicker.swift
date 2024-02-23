@@ -36,5 +36,5 @@ struct CustomBPPicker: View {
 }
 
 #Preview {
-    CustomBPPicker(selectedValue: .constant(120), valueRange: 100...120)
+    CustomBPPicker(selectedValue: .constant(20), valueRange: 10...120)
 }
