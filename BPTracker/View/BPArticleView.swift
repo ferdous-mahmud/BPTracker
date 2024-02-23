@@ -27,6 +27,7 @@ struct BPArticleView: View {
                     .padding(.trailing)
                     .frame(width: 30, height: 30)
                     .onTapGesture {
+                        haptic(.success)
                         dismiss()
                     }
             }

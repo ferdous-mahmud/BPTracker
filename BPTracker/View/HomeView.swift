@@ -14,6 +14,7 @@ struct HomeView: View {
         VStack {
             BPArticleTile()
                 .onTapGesture {
+                    haptic(.success)
                     isShowArticle.toggle()
                 }
                 .fullScreenCover(isPresented: $isShowArticle) {
