@@ -8,15 +8,22 @@
 import SwiftUI
 
 struct CustomBPPicker: View {
-
-    @State private var selectedSystolic =  120
+ 
+    @Binding var selectedValue: Int
+    let valueRange: ClosedRange<Int>
+    let pickerTitle: String
+    
+    init(selectedValue: Binding<Int>, valueRange: ClosedRange<Int>, pickerTitle: String = "Picker") {
+        self._selectedValue = selectedValue
+        self.valueRange = valueRange
+        self.pickerTitle = pickerTitle
+    }
     
     var body: some View {
-        let systolicValues = Array(100...200)
-        
-        Picker("Systolic", selection: $selectedSystolic) {
-            ForEach(systolicValues, id: \.self) { value in
-                Text("\(value)").tag(value)
+        Picker(pickerTitle, selection: $selectedValue) {
+            ForEach(valueRange, id: \.self) { value in
+                Text("\(value)")
+                    .tag(value)
                     .bold()
                     .font(.title2)
                     .foregroundColor(.gray)
@@ -24,9 +31,10 @@ struct CustomBPPicker: View {
         }
         .pickerStyle(.wheel)
         .frame(height: 150)
+        .background(.thickMaterial)
     }
 }
 
 #Preview {
-    CustomBPPicker()
+    CustomBPPicker(selectedValue: .constant(120), valueRange: 100...120)
 }

@@ -13,6 +13,10 @@
 		0C7A85982B8513B5004D76E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A85972B8513B5004D76E9 /* Preview Assets.xcassets */; };
 		0C965B5F2B87B32900738F2D /* BPArticleTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C965B5E2B87B32900738F2D /* BPArticleTile.swift */; };
 		0CAD06222B8868690098B478 /* CustomBPPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD06212B8868690098B478 /* CustomBPPicker.swift */; };
+		0CB703E72B8896ED005FC126 /* BPCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB703E62B8896ED005FC126 /* BPCondition.swift */; };
+		0CB703E92B88A1F9005FC126 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB703E82B88A1F9005FC126 /* Buttons.swift */; };
+		0CB703EB2B88A548005FC126 /* BPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB703EA2B88A548005FC126 /* BPModel.swift */; };
+		0CB703EF2B88AA5A005FC126 /* BPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB703EE2B88AA5A005FC126 /* BPViewModel.swift */; };
 		0CCB067D2B88577400AC427F /* BPArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCB067C2B88577400AC427F /* BPArticleView.swift */; };
 		0CDECC772B85CAEC005E7437 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDECC762B85CAEC005E7437 /* HomeView.swift */; };
 		0CDECC792B85D64A005E7437 /* AddNewBPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDECC782B85D64A005E7437 /* AddNewBPView.swift */; };
@@ -28,6 +32,10 @@
 		0C7A85972B8513B5004D76E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C965B5E2B87B32900738F2D /* BPArticleTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPArticleTile.swift; sourceTree = "<group>"; };
 		0CAD06212B8868690098B478 /* CustomBPPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBPPicker.swift; sourceTree = "<group>"; };
+		0CB703E62B8896ED005FC126 /* BPCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BPCondition.swift; path = BPTracker/Components/BPCondition.swift; sourceTree = SOURCE_ROOT; };
+		0CB703E82B88A1F9005FC126 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		0CB703EA2B88A548005FC126 /* BPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BPModel.swift; path = BPTracker/Components/BPModel.swift; sourceTree = SOURCE_ROOT; };
+		0CB703EE2B88AA5A005FC126 /* BPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BPViewModel.swift; path = BPTracker/Components/BPViewModel.swift; sourceTree = SOURCE_ROOT; };
 		0CCB067C2B88577400AC427F /* BPArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPArticleView.swift; sourceTree = "<group>"; };
 		0CDECC762B85CAEC005E7437 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0CDECC782B85D64A005E7437 /* AddNewBPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBPView.swift; sourceTree = "<group>"; };
@@ -91,6 +99,7 @@
 			children = (
 				0C965B5E2B87B32900738F2D /* BPArticleTile.swift */,
 				0CAD06212B8868690098B478 /* CustomBPPicker.swift */,
+				0CB703E82B88A1F9005FC126 /* Buttons.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -98,6 +107,8 @@
 		0CDECC712B85CA3C005E7437 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0CB703E62B8896ED005FC126 /* BPCondition.swift */,
+				0CB703EA2B88A548005FC126 /* BPModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +116,7 @@
 		0CDECC722B85CA5F005E7437 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0CB703EE2B88AA5A005FC126 /* BPViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -239,7 +251,11 @@
 			files = (
 				0CDECC772B85CAEC005E7437 /* HomeView.swift in Sources */,
 				0CDECC792B85D64A005E7437 /* AddNewBPView.swift in Sources */,
+				0CB703EF2B88AA5A005FC126 /* BPViewModel.swift in Sources */,
 				0CAD06222B8868690098B478 /* CustomBPPicker.swift in Sources */,
+				0CB703E92B88A1F9005FC126 /* Buttons.swift in Sources */,
+				0CB703E72B8896ED005FC126 /* BPCondition.swift in Sources */,
+				0CB703EB2B88A548005FC126 /* BPModel.swift in Sources */,
 				0C965B5F2B87B32900738F2D /* BPArticleTile.swift in Sources */,
 				0C7A85932B8513B5004D76E9 /* TabViewView.swift in Sources */,
 				0CDECC7B2B85D689005E7437 /* AnalyticsView.swift in Sources */,
