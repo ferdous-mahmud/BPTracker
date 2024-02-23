@@ -13,8 +13,20 @@ struct HomeView: View {
     var body: some View {
         VStack {
             BPArticleTile()
+                .onTapGesture {
+                    isShowArticle.toggle()
+                }
+                .fullScreenCover(isPresented: $isShowArticle) {
+                    BPArticleView()
+                }
             
-            Text("History")
+            HStack {
+                Text("History")
+                    .bold()
+                    .font(.title3)
+                Spacer()
+            }
+            .padding(.leading)
             
             Spacer()
         }
