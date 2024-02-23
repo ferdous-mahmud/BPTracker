@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var isShowArticle = false
+    
     var body: some View {
-        Text("home")
+        VStack {
+            BPArticleTile()
+            
+            Text("History")
+            
+            Spacer()
+        }
     }
 }
 
