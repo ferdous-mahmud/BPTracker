@@ -11,12 +11,7 @@ struct AddNewBPView: View {
     
     @Environment(\.dismiss) var dismiss
     @ObservedObject var vm: BPViewModel = BPViewModel()
-    
-    @State var selectedDate = Date.now
-    @State var isTakePill = true
-    @State var sysPressure = 120
-    @State var disPressure = 80
-    @State var pulse = 90
+    @State private var newBP = BPModel(sysBP: 120, diaBP: 80, pulse: 90, isTakaPill: true, date: Date.now)
     @State var conditon = BPCondition(name: "Normal", color: Color.green)
     
     var body: some View {
@@ -46,11 +41,11 @@ struct AddNewBPView: View {
                         .font(.subheadline)
                         .padding(.top)
                         .foregroundColor(.white)
-                    CustomBPPicker(selectedValue: $sysPressure, valueRange: 10...300)
+                    CustomBPPicker(selectedValue: $newBP.sysBP, valueRange: 10...300)
                         .background(.thickMaterial)
                 }
-                .onChange(of: sysPressure) { newValue in
-                    conditon = vm.getBloodPressureConditionString(systolic: newValue, diastolic: disPressure)
+                .onChange(of: newBP.sysBP) { newValue in
+                    conditon = vm.getBloodPressureConditionString(systolic: newValue, diastolic: newBP.diaBP)
                 }
                 
                 VStack(spacing: 0) {
@@ -59,11 +54,11 @@ struct AddNewBPView: View {
                         .font(.subheadline)
                         .padding(.top)
                         .foregroundColor(.white)
-                    CustomBPPicker(selectedValue: $disPressure, valueRange: 10...300)
+                    CustomBPPicker(selectedValue: $newBP.diaBP, valueRange: 10...300)
                         .background(.thickMaterial)
                 }
-                .onChange(of: disPressure) { newValue in
-                    conditon = vm.getBloodPressureConditionString(systolic: sysPressure, diastolic: newValue)
+                .onChange(of: newBP.diaBP) { newValue in
+                    conditon = vm.getBloodPressureConditionString(systolic: newBP.sysBP, diastolic: newValue)
                 }
                 
                 VStack(spacing: 0) {
@@ -72,7 +67,7 @@ struct AddNewBPView: View {
                         .font(.subheadline)
                         .padding(.top)
                         .foregroundColor(.white)
-                    CustomBPPicker(selectedValue: $pulse, valueRange: 50...120)
+                    CustomBPPicker(selectedValue: $newBP.pulse, valueRange: 50...120)
                         .background(.thickMaterial)
                 }
             }
@@ -91,7 +86,7 @@ struct AddNewBPView: View {
             .cornerRadius(10)
             .padding(.vertical)
             
-            Toggle(isOn: $isTakePill, label: {
+            Toggle(isOn: $newBP.isTakaPill, label: {
                 Text("Take Pills?")
                     .foregroundColor(.gray)
                     .bold()
@@ -102,7 +97,7 @@ struct AddNewBPView: View {
             .background(.ultraThinMaterial)
             .cornerRadius(10)
             
-            DatePicker(selection: $selectedDate, in: ...Date(), label: {
+            DatePicker(selection: $newBP.date, in: ...Date(), label: {
                 Text("Date")
                     .foregroundColor(.gray)
                     .bold()
@@ -114,13 +109,7 @@ struct AddNewBPView: View {
             .padding(.vertical)
             
             PrimaryButton(title: "Add", onTap: {
-                if vm.addNewBP(newBP: BPModel(
-                    sysBP: Int32(sysPressure),
-                    diaBP: Int32(disPressure),
-                    pulse: Int32(pulse),
-                    isTakaPill: isTakePill,
-                    date: selectedDate)
-                ) {
+                if vm.addNewBP(newBP: self.newBP) {
                     dismiss()
                 } else {
                     print("Show error alert")

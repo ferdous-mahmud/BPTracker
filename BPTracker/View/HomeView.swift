@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     @State var isShowArticle = false
-    
     @ObservedObject var vm: BPViewModel = BPViewModel()
     
     var body: some View {

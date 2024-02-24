@@ -9,9 +9,9 @@ import Foundation
 
 struct BPModel {
     var id = UUID()
-    var sysBP: Int32
-    var diaBP: Int32
-    var pulse: Int32
+    var sysBP: Int
+    var diaBP: Int
+    var pulse: Int
     var isTakaPill: Bool
     var date: Date
 }
