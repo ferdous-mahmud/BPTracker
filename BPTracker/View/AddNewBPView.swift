@@ -123,7 +123,7 @@ struct AddNewBPView: View {
                 ) {
                     dismiss()
                 } else {
-                    print("Show alert")
+                    print("Show error alert")
                 }
             })
       

@@ -32,7 +32,26 @@ struct HomeView: View {
             .padding(.leading)
             
             List(vm.bpList, id: \.id) { bp in
-                Text("\(bp.diaBP)")
+                VStack {
+                    HStack {
+                        Text(vm.dateFormatter.string(from: bp.date))
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundColor(.gray)
+                        Spacer()
+                    }
+                    
+                    HStack {
+                        Text("\(bp.sysBP) / \(bp.diaBP)")
+                            .bold()
+                            .font(.title2)
+                        Spacer()
+                         
+                        Image(bp.isTakaPill ? "medicine" : "medicineCross")
+                            .resizable()
+                            .frame(width: 35, height: 35)
+                            .cornerRadius(15)
+                    }
+                }
             }
             .onAppear {
                 vm.getMockBPs()
