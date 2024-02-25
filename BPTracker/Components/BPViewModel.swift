@@ -14,22 +14,14 @@ final class BPViewModel: ObservableObject {
     /// Return a mock data for implementing view
     func getMockBPs() {
         bpList = [
-            BPModel(sysBP: 110, diaBP: 50, pulse: 90, isTakaPill: false,
+            BPModel(sysBP: 110, diaBP: 50, pulse: 90, isTakePill: false,
                     date: dateFormatter.date(from: "Feb  1  09:30 AM") ?? Date.now),
-            BPModel(sysBP: 132, diaBP: 72, pulse: 82, isTakaPill: true,
+            BPModel(sysBP: 132, diaBP: 72, pulse: 82, isTakePill: true,
                     date: dateFormatter.date(from: "Feb  2  03:15 PM") ?? Date.now),
-            BPModel(sysBP: 101, diaBP: 69, pulse: 108, isTakaPill: false,
+            BPModel(sysBP: 101, diaBP: 69, pulse: 108, isTakePill: false,
                     date: dateFormatter.date(from: "Feb  3  07:45 PM") ?? Date.now),
-            BPModel(sysBP: 123, diaBP: 91, pulse: 93, isTakaPill: true,
-                    date: dateFormatter.date(from: "Feb  4  11:20 AM") ?? Date.now),
-            BPModel(sysBP: 154, diaBP: 73, pulse: 84, isTakaPill: false,
-                    date: dateFormatter.date(from: "Feb  5  05:35 PM") ?? Date.now),
-            BPModel(sysBP: 135, diaBP: 54, pulse: 95, isTakaPill: true,
-                    date: dateFormatter.date(from: "Feb  6  08:00 AM") ?? Date.now),
-            BPModel(sysBP: 106, diaBP: 75, pulse: 106, isTakaPill: false,
-                    date: dateFormatter.date(from: "Feb  7  02:45 PM") ?? Date.now),
-            BPModel(sysBP: 187, diaBP: 96, pulse: 107, isTakaPill: true,
-                    date: dateFormatter.date(from: "Feb  8  06:30 AM") ?? Date.now)
+            BPModel(sysBP: 123, diaBP: 91, pulse: 93, isTakePill: true,
+                    date: dateFormatter.date(from: "Feb  4  11:20 AM") ?? Date.now)
         ]
     }
     

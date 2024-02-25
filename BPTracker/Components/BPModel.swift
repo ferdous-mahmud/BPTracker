@@ -12,6 +12,6 @@ struct BPModel {
     var sysBP: Int
     var diaBP: Int
     var pulse: Int
-    var isTakaPill: Bool
+    var isTakePill: Bool
     var date: Date
 }
