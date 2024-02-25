@@ -10,9 +10,9 @@ import SwiftUI
 struct AddNewBPView: View {
     
     @Environment(\.dismiss) var dismiss
-    @ObservedObject var vm: BPViewModel = BPViewModel()
-    @State private var newBP = BPModel(sysBP: 120, diaBP: 80, pulse: 90, isTakaPill: true, date: Date.now)
-    @State var conditon = BPCondition(name: "Normal", color: Color.green)
+    @EnvironmentObject var vm: BPViewModel
+    @State private var newBP = BPModel(sysBP: 120, diaBP: 80, pulse: 90, isTakePill: true, date: Date.now)
+    @State var condition = BPCondition(name: "Normal", color: Color.green)
     
     var body: some View {
         VStack(spacing: 0) {
@@ -45,7 +45,7 @@ struct AddNewBPView: View {
                         .background(.thickMaterial)
                 }
                 .onChange(of: newBP.sysBP) { newValue in
-                    conditon = vm.getBloodPressureConditionString(systolic: newValue, diastolic: newBP.diaBP)
+                    condition = vm.getBloodPressureConditionString(systolic: newValue, diastolic: newBP.diaBP)
                 }
                 
                 VStack(spacing: 0) {
@@ -58,7 +58,7 @@ struct AddNewBPView: View {
                         .background(.thickMaterial)
                 }
                 .onChange(of: newBP.diaBP) { newValue in
-                    conditon = vm.getBloodPressureConditionString(systolic: newBP.sysBP, diastolic: newValue)
+                    condition = vm.getBloodPressureConditionString(systolic: newBP.sysBP, diastolic: newValue)
                 }
                 
                 VStack(spacing: 0) {
@@ -76,17 +76,17 @@ struct AddNewBPView: View {
             
             HStack {
                 Spacer()
-                Text(conditon.name).bold()
+                Text(condition.name).bold()
                     .font(.title3)
-                    .foregroundColor(conditon.color)
+                    .foregroundColor(condition.color)
                 Spacer()
             }
             .padding()
-            .background(conditon.color.opacity(0.2))
+            .background(condition.color.opacity(0.2))
             .cornerRadius(10)
             .padding(.vertical)
             
-            Toggle(isOn: $newBP.isTakaPill, label: {
+            Toggle(isOn: $newBP.isTakePill, label: {
                 Text("Take Pills?")
                     .foregroundColor(.gray)
                     .bold()
@@ -125,4 +125,5 @@ struct AddNewBPView: View {
 
 #Preview {
     AddNewBPView()
+        .environmentObject(BPViewModel())
 }

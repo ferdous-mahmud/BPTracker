@@ -9,11 +9,13 @@ import SwiftUI
 
 struct TabViewView: View {
     @State var isShowNewBPSheet = false
+    @ObservedObject var vm: BPViewModel = BPViewModel()
     
     var body: some View {
         ZStack {
             TabView {
                 HomeView()
+                    .environmentObject(vm)
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
@@ -42,6 +44,7 @@ struct TabViewView: View {
                         }
                         .sheet(isPresented: $isShowNewBPSheet) {
                             AddNewBPView()
+                                .environmentObject(vm)
                         }
                 }
             }
