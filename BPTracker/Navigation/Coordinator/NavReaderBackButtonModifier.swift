@@ -52,7 +52,14 @@ extension View {
     ///   show the back button. The default value is `true`.
     ///   - iconSystemName: System image name for the button icon. The default value is `chevron.backward`.
     ///   - title: Title for the back button. The default value is `Back`.
-    func navigationBarBackButton(isShown: Bool = true, iconSystemName: String? = "chevron.backward", title: String? = "Back") -> some View {
-        self.modifier(NavReaderBackButtonModifier(isShown: isShown, iconSystemName: iconSystemName, title: title))
+    func navigationBarBackButton(
+        isShown: Bool = true,
+        iconSystemName: String? = "chevron.backward",
+        title: String? = "Back") -> some View {
+        self.modifier(NavReaderBackButtonModifier(
+            isShown: isShown,
+            iconSystemName: iconSystemName,
+            title: title)
+        )
     }
 }

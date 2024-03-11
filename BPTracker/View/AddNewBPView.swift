@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddNewBPView: View {
     
-    @Environment(\.dismiss) var dismiss
+//    @Environment(\.dismiss) var dismiss
     @EnvironmentObject var vm: BPViewModel
     @State private var newBP = BPModel(sysBP: 120, diaBP: 80, pulse: 90, isTakePill: true, date: Date.now)
     @State var condition = BPCondition(name: "Normal", color: Color.green)
@@ -29,7 +29,7 @@ struct AddNewBPView: View {
                     .frame(width: 30, height: 30)
                     .onTapGesture {
                         haptic(.success)
-                        dismiss()
+//                        dismiss()
                     }
             }
             .padding(.vertical)
@@ -110,7 +110,7 @@ struct AddNewBPView: View {
             
             PrimaryButton(title: "Add", onTap: {
                 if vm.addNewBP(newBP: self.newBP) {
-                    dismiss()
+//                    dismiss()
                 } else {
                     print("Show error alert")
                 }

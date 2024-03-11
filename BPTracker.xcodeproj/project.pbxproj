@@ -22,6 +22,18 @@
 		0CDECC792B85D64A005E7437 /* AddNewBPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDECC782B85D64A005E7437 /* AddNewBPView.swift */; };
 		0CDECC7B2B85D689005E7437 /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDECC7A2B85D689005E7437 /* AnalyticsView.swift */; };
 		0CDECC7E2B85DD17005E7437 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDECC7D2B85DD17005E7437 /* HapticManager.swift */; };
+		0CEC715A2B9F0CA9006A2184 /* View+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC714E2B9F0CA9006A2184 /* View+Coordinator.swift */; };
+		0CEC715B2B9F0CA9006A2184 /* NavigationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC714F2B9F0CA9006A2184 /* NavigationStep.swift */; };
+		0CEC715C2B9F0CA9006A2184 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC71502B9F0CA9006A2184 /* Navigation.swift */; };
+		0CEC715D2B9F0CA9006A2184 /* RootType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC71512B9F0CA9006A2184 /* RootType.swift */; };
+		0CEC715E2B9F0CA9006A2184 /* DestinationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC71522B9F0CA9006A2184 /* DestinationViewModifier.swift */; };
+		0CEC715F2B9F0CA9006A2184 /* OnAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC71532B9F0CA9006A2184 /* OnAppearModifier.swift */; };
+		0CEC71602B9F0CA9006A2184 /* NavigationRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC71542B9F0CA9006A2184 /* NavigationRoot.swift */; };
+		0CEC71612B9F0CA9006A2184 /* NavigationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC71552B9F0CA9006A2184 /* NavigationType.swift */; };
+		0CEC71622B9F0CA9006A2184 /* DestinationLinkModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC71562B9F0CA9006A2184 /* DestinationLinkModifier.swift */; };
+		0CEC71632B9F0CA9006A2184 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC71572B9F0CA9006A2184 /* NavigationCoordinator.swift */; };
+		0CEC71642B9F0CA9006A2184 /* NavReaderBackButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC71582B9F0CA9006A2184 /* NavReaderBackButtonModifier.swift */; };
+		0CEC71652B9F0CA9006A2184 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC71592B9F0CA9006A2184 /* Destination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +53,18 @@
 		0CDECC782B85D64A005E7437 /* AddNewBPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBPView.swift; sourceTree = "<group>"; };
 		0CDECC7A2B85D689005E7437 /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
 		0CDECC7D2B85DD17005E7437 /* HapticManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		0CEC714E2B9F0CA9006A2184 /* View+Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Coordinator.swift"; sourceTree = "<group>"; };
+		0CEC714F2B9F0CA9006A2184 /* NavigationStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationStep.swift; sourceTree = "<group>"; };
+		0CEC71502B9F0CA9006A2184 /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		0CEC71512B9F0CA9006A2184 /* RootType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootType.swift; sourceTree = "<group>"; };
+		0CEC71522B9F0CA9006A2184 /* DestinationViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewModifier.swift; sourceTree = "<group>"; };
+		0CEC71532B9F0CA9006A2184 /* OnAppearModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnAppearModifier.swift; sourceTree = "<group>"; };
+		0CEC71542B9F0CA9006A2184 /* NavigationRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRoot.swift; sourceTree = "<group>"; };
+		0CEC71552B9F0CA9006A2184 /* NavigationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationType.swift; sourceTree = "<group>"; };
+		0CEC71562B9F0CA9006A2184 /* DestinationLinkModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationLinkModifier.swift; sourceTree = "<group>"; };
+		0CEC71572B9F0CA9006A2184 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		0CEC71582B9F0CA9006A2184 /* NavReaderBackButtonModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavReaderBackButtonModifier.swift; sourceTree = "<group>"; };
+		0CEC71592B9F0CA9006A2184 /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +97,7 @@
 		0C7A858F2B8513B5004D76E9 /* BPTracker */ = {
 			isa = PBXGroup;
 			children = (
+				0CEC714C2B9F0CA9006A2184 /* Navigation */,
 				0CDECC752B85CAA2005E7437 /* Core */,
 				0CDECC742B85CA78005E7437 /* Extension */,
 				0CDECC7C2B85DCDC005E7437 /* Uitls */,
@@ -154,6 +179,33 @@
 				0CDECC7D2B85DD17005E7437 /* HapticManager.swift */,
 			);
 			path = Uitls;
+			sourceTree = "<group>";
+		};
+		0CEC714C2B9F0CA9006A2184 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0CEC714D2B9F0CA9006A2184 /* Coordinator */,
+				0CEC71592B9F0CA9006A2184 /* Destination.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		0CEC714D2B9F0CA9006A2184 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0CEC714E2B9F0CA9006A2184 /* View+Coordinator.swift */,
+				0CEC714F2B9F0CA9006A2184 /* NavigationStep.swift */,
+				0CEC71502B9F0CA9006A2184 /* Navigation.swift */,
+				0CEC71512B9F0CA9006A2184 /* RootType.swift */,
+				0CEC71522B9F0CA9006A2184 /* DestinationViewModifier.swift */,
+				0CEC71532B9F0CA9006A2184 /* OnAppearModifier.swift */,
+				0CEC71542B9F0CA9006A2184 /* NavigationRoot.swift */,
+				0CEC71552B9F0CA9006A2184 /* NavigationType.swift */,
+				0CEC71562B9F0CA9006A2184 /* DestinationLinkModifier.swift */,
+				0CEC71572B9F0CA9006A2184 /* NavigationCoordinator.swift */,
+				0CEC71582B9F0CA9006A2184 /* NavReaderBackButtonModifier.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,19 +301,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CEC71632B9F0CA9006A2184 /* NavigationCoordinator.swift in Sources */,
 				0CDECC772B85CAEC005E7437 /* HomeView.swift in Sources */,
 				0CDECC792B85D64A005E7437 /* AddNewBPView.swift in Sources */,
+				0CEC715B2B9F0CA9006A2184 /* NavigationStep.swift in Sources */,
 				0CB703EF2B88AA5A005FC126 /* BPViewModel.swift in Sources */,
 				0CAD06222B8868690098B478 /* CustomBPPicker.swift in Sources */,
+				0CEC715D2B9F0CA9006A2184 /* RootType.swift in Sources */,
 				0CB703E92B88A1F9005FC126 /* Buttons.swift in Sources */,
+				0CEC71602B9F0CA9006A2184 /* NavigationRoot.swift in Sources */,
 				0CB703E72B8896ED005FC126 /* BPCondition.swift in Sources */,
 				0CB703EB2B88A548005FC126 /* BPModel.swift in Sources */,
 				0C965B5F2B87B32900738F2D /* BPArticleTile.swift in Sources */,
+				0CEC71622B9F0CA9006A2184 /* DestinationLinkModifier.swift in Sources */,
+				0CEC71612B9F0CA9006A2184 /* NavigationType.swift in Sources */,
 				0C7A85932B8513B5004D76E9 /* TabViewView.swift in Sources */,
 				0CDECC7B2B85D689005E7437 /* AnalyticsView.swift in Sources */,
+				0CEC715C2B9F0CA9006A2184 /* Navigation.swift in Sources */,
+				0CEC71652B9F0CA9006A2184 /* Destination.swift in Sources */,
 				0CDECC7E2B85DD17005E7437 /* HapticManager.swift in Sources */,
+				0CEC71642B9F0CA9006A2184 /* NavReaderBackButtonModifier.swift in Sources */,
+				0CEC715E2B9F0CA9006A2184 /* DestinationViewModifier.swift in Sources */,
+				0CEC715F2B9F0CA9006A2184 /* OnAppearModifier.swift in Sources */,
 				0C7A85912B8513B5004D76E9 /* BPTrackerApp.swift in Sources */,
 				0CCB067D2B88577400AC427F /* BPArticleView.swift in Sources */,
+				0CEC715A2B9F0CA9006A2184 /* View+Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

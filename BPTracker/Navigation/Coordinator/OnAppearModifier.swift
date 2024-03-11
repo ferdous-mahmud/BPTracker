@@ -1,8 +1,8 @@
 //
 //  OnAppearModifier.swift
-//  NavigationCoordinator
+//  BPTracker
 //
-//  Created by Alex Nagy on 13.02.2024.
+//  Created by Ferdous Mahmud Akash on 11/3/24.
 //
 
 import SwiftUI
@@ -44,5 +44,3 @@ public extension View {
         self.modifier(OnAppearModifier(perform: action))
     }
 }
-
-

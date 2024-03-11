@@ -1,8 +1,8 @@
 //
 //  View+Coordinator.swift
-//  NavigationCoordinator
+//  BPTracker
 //
-//  Created by Alex Nagy on 13.02.2024.
+//  Created by Ferdous Mahmud Akash on 11/3/24.
 //
 
 import SwiftUI
@@ -39,7 +39,11 @@ extension View {
                                        @ViewBuilder destination: @escaping () -> Destination) -> some View {
         switch type {
         case .link:
-            self.modifier(DestinationLinkModifier(isPresented: isPresented, onDismiss: onDismiss, destination: destination))
+            self.modifier(DestinationLinkModifier(
+                isPresented: isPresented,
+                onDismiss: onDismiss,
+                destination: destination)
+            )
         case .sheet:
             self.sheet(isPresented: isPresented, onDismiss: onDismiss) {
                 destination()

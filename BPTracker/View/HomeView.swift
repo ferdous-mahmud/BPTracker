@@ -8,21 +8,19 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var isShowArticle = false
+    @EnvironmentObject private var navigation: Navigation
     @EnvironmentObject var vm: BPViewModel
     
     var body: some View {
         NavigationStack {
             VStack {
-                BPArticleTile()
-                    .onTapGesture {
-                        haptic(.success)
-                        isShowArticle.toggle()
-                    }
-                    .fullScreenCover(isPresented: $isShowArticle) {
-                        BPArticleView()
-                    }
-                
+                Button(action: {
+                    navigation.push(.bpArticle, type: .fullScreenCover)
+                    haptic(.success)
+                }, label: {
+                    BPArticleTile()
+                })
+                    
                 HStack {
                     Text("History")
                         .bold()

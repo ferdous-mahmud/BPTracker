@@ -1,8 +1,8 @@
 //
 //  NavigationProxy.swift
-//  NavigationCoordinator
+//  BPTracker
 //
-//  Created by Alex Nagy on 13.02.2024.
+//  Created by Ferdous Mahmud Akash on 11/3/24.
 //
 
 import SwiftUI
@@ -17,7 +17,7 @@ class Navigation: ObservableObject {
     
     @Published var isPopping = false
     
-    @Published var dismissedDestination: Destination? = nil
+    @Published var dismissedDestination: Destination?
     
     private var cancellables: Set<AnyCancellable> = []
     
@@ -33,7 +33,11 @@ class Navigation: ObservableObject {
     ///   - type: the type of navigation; default is `.link`
     ///   - onComplete: callback trigerred when the navigation finished
     ///   - onDismiss: callback trigerred when the `destination` is dismissed
-    func push(_ destination: Destination, type: NavigationType = .link, onComplete: @escaping (() -> Void), onDismiss: @escaping (() -> Void)) {
+    func push(_ destination: Destination, 
+              type: NavigationType = .link,
+              onComplete: @escaping (() -> Void),
+              onDismiss: @escaping (() -> Void)
+    ) {
         present(destination, type: type, onComplete: onComplete, onDismiss: onDismiss)
     }
     
@@ -223,7 +227,11 @@ class Navigation: ObservableObject {
     ///   - type: the type of navigation; default is `.link`
     ///   - onComplete: callback trigerred when the navigation finished
     ///   - onDismiss: callback trigerred when the `destination` is dismissed
-    private func present(_ destination: Destination, type: NavigationType, onComplete: (() -> Void)?, onDismiss: (() -> Void)?) {
+    private func present(_ destination: Destination,
+                         type: NavigationType,
+                         onComplete: (() -> Void)?,
+                         onDismiss: (() -> Void)?
+    ) {
         switch type {
         case .link:
             stack.append(.init(push: destination))

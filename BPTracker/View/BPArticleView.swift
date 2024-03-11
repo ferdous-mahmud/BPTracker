@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct BPArticleView: View {
-    @Environment(\.dismiss) var dismiss
     
+    @EnvironmentObject private var navigation: Navigation
+   
     let desclimerText = """
     The classification is not a mandate but rather a guidance.
     Always discuss with your doctor before using the limits in the table.
@@ -27,8 +28,8 @@ struct BPArticleView: View {
                     .padding(.trailing)
                     .frame(width: 30, height: 30)
                     .onTapGesture {
+                        navigation.pop()
                         haptic(.success)
-                        dismiss()
                     }
             }
             

@@ -1,8 +1,8 @@
 //
 //  NavigationType.swift
-//  NavigationCoordinator
+//  BPTracker
 //
-//  Created by Alex Nagy on 06.07.2023.
+//  Created by Ferdous Mahmud Akash on 11/3/24.
 //
 
 import Foundation

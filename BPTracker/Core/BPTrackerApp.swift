@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct BPTrackerApp: App {
+    @StateObject var vm: BPViewModel = BPViewModel()
+    
     var body: some Scene {
         WindowGroup {
             TabViewView()
+                .environmentObject(vm)
         }
     }
 }

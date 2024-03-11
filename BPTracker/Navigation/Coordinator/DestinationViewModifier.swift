@@ -1,8 +1,8 @@
 //
 //  DestinationViewModifier.swift
-//  NavigationCoordinatorDemo
+//  BPTracker
 //
-//  Created by Alex Nagy on 18.02.2024.
+//  Created by Ferdous Mahmud Akash on 11/3/24.
 //
 
 import SwiftUI

@@ -1,8 +1,8 @@
 //
 //  NavigationCoordinator.swift
-//  NavigationCoordinator
+//  BPTracker
 //
-//  Created by Alex Nagy on 13.02.2024.
+//  Created by Ferdous Mahmud Akash on 11/3/24.
 //
 
 import SwiftUI
@@ -21,7 +21,7 @@ struct NavigationCoordinator<Content: View>: View {
     @State private var isPresented = false
     @State private var navigationStep = NavigationStep(push: .none)
     @State private var destinationIndex = -1
-    @State private var dismissedDestination: Destination? = nil
+    @State private var dismissedDestination: Destination?
     
     var body: some View {
         content()

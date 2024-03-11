@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct TabViewView: View {
-    @State var isShowNewBPSheet = false
-    @ObservedObject var vm: BPViewModel = BPViewModel()
+    @EnvironmentObject private var navigation: Navigation
+    @EnvironmentObject var vm: BPViewModel
     
     var body: some View {
         ZStack {
             TabView {
-                HomeView()
+                NavigationRoot(.home)
                     .environmentObject(vm)
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
-                AnalyticsView()
+                NavigationRoot(.analytics)
                     .tabItem {
                         Label("Analytics", systemImage: "chart.line.uptrend.xyaxis.circle")
                     }
@@ -39,13 +39,10 @@ struct TabViewView: View {
                         .foregroundColor(Color("AccentColor"))
                         .font(.system(size: 45))
                         .onTapGesture {
-                            isShowNewBPSheet.toggle()
                             haptic(.success)
+                            navigation.push(.addNewBp, type: .sheet)
                         }
-                        .sheet(isPresented: $isShowNewBPSheet) {
-                            AddNewBPView()
-                                .environmentObject(vm)
-                        }
+
                 }
             }
         }

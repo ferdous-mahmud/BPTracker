@@ -64,7 +64,6 @@ final class BPViewModel: ObservableObject {
         } else if systolic >=  200 && diastolic >=  130 {
             return BPCondition(name: "Hypertension Stage 4", color: Color.red)
         } else {
-            //            return BPCondition(name: "Invalid input: Blood pressure values are out of range", color: Color.yellow)
             return BPCondition(name: "Invalid input!", color: Color.red)
         }
     }
