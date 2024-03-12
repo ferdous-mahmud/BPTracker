@@ -51,7 +51,7 @@ struct BPArticleView: View {
                 Spacer()
             }
             
-            Image("BPArticle")
+            Image(.bpArticle)
                 .resizable()
                 .padding()
                 .frame(height: 380)

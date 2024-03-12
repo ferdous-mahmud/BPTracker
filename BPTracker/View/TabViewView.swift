@@ -33,7 +33,7 @@ struct TabViewView: View {
                 Spacer()
                 ZStack {
                     Circle()
-                        .fill(Color(UIColor(named: "TabBarBackgroundColor")!))
+                        .fill(Color(UIColor(.tabBarBackground)))
                         .frame(width: 100, height: 65)
                     Image(systemName: "plus.circle.fill")
                         .foregroundColor(Color("AccentColor"))

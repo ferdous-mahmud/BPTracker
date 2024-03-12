@@ -44,7 +44,7 @@ struct HomeView: View {
                                 .font(.title2)
                             Spacer()
                              
-                            Image(bp.isTakePill ? "medicine" : "medicineCross")
+                            Image(bp.isTakePill ? .medicine : .medicineCross)
                                 .resizable()
                                 .frame(width: 35, height: 35)
                                 .cornerRadius(15)
